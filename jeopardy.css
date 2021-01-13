@@ -1,0 +1,119 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+:root {
+  --table-bg: #000103;
+  --cell-bg: #01319e;
+  --text-primary: #f3f3f2;
+  --text-secondary: #e6ab5c;
+  --text-shadow: #020b1e;
+  --answer-bg: #529b54;
+  --red-team: #fb6a62;
+  --blue-team: #a8e4ef;
+  --yellow-team: #fcfc99;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Copse, sans-serif;
+}
+
+body {
+  padding: 60px 0 60px 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+#logo {
+  color: var(--text-secondary);
+  fill: currentColor;
+  filter: drop-shadow(2px 2px var(--text-shadow));
+  width: 20%;
+  max-width: 350px;
+}
+
+button {
+  margin: 1rem;
+  color: var(--text-primary);
+  background: var(--cell-bg);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  border: none;
+  background: #011c5a;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.game {
+  flex-grow: 1;
+}
+
+table {
+  margin: 0 1rem;
+  background: var(--table-bg);
+  border-spacing: 0.25rem;
+  flex-grow: 1;
+}
+
+/* ul {
+  list-style: none;
+} */
+.cell {
+  background: var(--cell-bg);
+  text-align: center;
+  padding: 1rem;
+  width: 200px;
+}
+
+.category {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 2px 2px var(--text-shadow);
+  text-transform: uppercase;
+}
+
+.value {
+  color: var(--text-secondary);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 3px 2px var(--text-shadow);
+}
+
+.question,
+.answer {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px var(--text-shadow);
+  text-transform: uppercase;
+}
+
+.answer {
+  background: var(--answer-bg);
+}
