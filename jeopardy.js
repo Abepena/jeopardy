@@ -35,7 +35,7 @@ async function getCategoryIds() {
   // We want to sample 6 from 100 randomly and offset between 0 and 18302 to cover all possible categories
 
   const offset = Math.floor(Math.random() * 18303);
-  const { data } = await axios.get(`http://jservice.io/api/categories`, {
+  const { data } = await axios.get(`https://jservice.io/api/categories`, {
     params: { count: 100, offset },
   });
   const categoryIds = data.map((category) => category.id);
@@ -57,7 +57,7 @@ async function getCategoryIds() {
 
 async function getCategory(catId) {
   const { data: category } = await axios.get(
-    `http://jservice.io/api/category`,
+    `https://jservice.io/api/category`,
     {
       params: { id: catId },
     }
